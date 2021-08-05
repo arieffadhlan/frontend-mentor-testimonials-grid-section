@@ -1,2 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.cards-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 25px;
+  gap: 25px;
+  -ms-grid-columns: (258px)[4];
+      grid-template-columns: repeat(4, 258px);
+  -ms-grid-rows: 292px 282px;
+      grid-template-rows: 292px 282px;
+      grid-template-areas: "Daniel Daniel Jonathan Kira" "Jeanette Patrick Patrick Kira";
+}
+
+.card {
+  padding: 25px 33px 33px;
+  border-radius: 10px;
+  -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-user .card-bio img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+}
+
+.card-bio-text {
+  padding-left: 14px;
+}
+
+.card-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-edu {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 50%;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-quote {
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  opacity: 70%;
+}
+
+.card:first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Daniel;
+  background-color: #7541c8;
+  color: white;
+}
+
+.card:first-child .card-title {
+  margin: 20px 0 15px;
+}
+
+.card:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: Jonathan;
+  background-color: #48556a;
+  color: white;
+}
+
+.card:nth-child(2) .card-title {
+  margin: 20px 0 15px;
+}
+
+.card:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Jeanette;
+  background-color: white;
+  color: #48556a;
+}
+
+.card:nth-child(3) .card-title {
+  margin: 20px 0 23px;
+}
+
+.card:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: Patrick;
+  background-color: #19212e;
+  color: white;
+}
+
+.card:nth-child(4) .card-title {
+  margin: 20px 0 23px;
+}
+
+.card:last-child {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: Kira;
+  background-color: white;
+  color: #48556a;
+}
+
+.card:last-child .card-title {
+  margin: 20px 0 18px;
+}
 /*# sourceMappingURL=style.css.map */
