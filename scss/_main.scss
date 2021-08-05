@@ -13,11 +13,16 @@ body {
 .cards-container {
 	display: grid;
 	justify-content: center;
-	padding: 20px 25px;
 	gap: 25px;
-	grid-template-columns: repeat(4, 258px);
-	grid-template-rows: 292px 282px;
-	grid-template-areas: "Daniel Daniel Jonathan Kira" "Jeanette Patrick Patrick Kira";
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, min-content);
+	grid-template-areas:
+		"Daniel"
+		"Jonathan"
+		"Jeanette"
+		"Patrick"
+		"Kira";
+	padding: 20vh 25px;
 }
 
 .card {
@@ -121,5 +126,41 @@ body {
 		.card-title {
 			margin: 20px 0 18px;
 		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.cards-container {
+		grid-template-columns: repeat(4, 258px);
+		grid-template-rows: 292px 282px;
+		grid-template-areas:
+			"Daniel Daniel Jonathan Kira"
+			"Jeanette Patrick Patrick Kira";
+	}
+}
+
+@media screen and (min-width: 924px) and (max-width: 1199.99px) {
+	.cards-container {
+		grid-template-columns: repeat(3, minmax(215px, 255px));
+		grid-template-rows:
+			minmax(min-content, 282px)
+			minmax(min-content, 262px)
+			252px;
+		grid-template-areas:
+			"Daniel Daniel Jonathan"
+			"Jeanette Patrick Patrick"
+			"Kira Kira Kira";
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 923.99px) {
+	.cards-container {
+		grid-template-columns: repeat(2, minmax(236px, 255px));
+		grid-template-rows: 292px 292px 285px 310px;
+		grid-template-areas:
+			"Daniel Daniel"
+			"Jonathan Jeanette"
+			"Patrick Patrick"
+			"Kira Kira";
 	}
 }
