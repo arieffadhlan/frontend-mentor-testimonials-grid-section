@@ -24,7 +24,7 @@ body {
       grid-template-rows: repeat(5, -webkit-min-content);
       grid-template-rows: repeat(5, min-content);
       grid-template-areas: "Daniel" "Jonathan" "Jeanette" "Patrick" "Kira";
-  padding: 20vh 25px;
+  padding: 15vh 25px;
 }
 
 .card {
